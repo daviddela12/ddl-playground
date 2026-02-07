@@ -11,6 +11,13 @@ describe('AppComponent', () => {
       imports: [AppComponent],
     }).compileComponents();
 
+    /**
+     * Key pieces:
+     * - ComponentFixture - Wrapper with testing utilities
+     * - component - Direct access to the TypeScript class
+     * - compiled - The actual rendered HTML
+     * - fixture.detectChanges() - Triggers change detection (more on this soon)
+     */
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
     compiled = fixture.nativeElement as HTMLElement;
